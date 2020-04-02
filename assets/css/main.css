@@ -16,7 +16,7 @@
 }
 .logo #logo-portfolio{
 	transition: color 0.75s ease;
- 	color:grey!important;
+ 	color:#dcdcdc!important;
 }
 
 .logo:hover a{
@@ -25,7 +25,7 @@
 
 .logo:hover #logo-name{
 	  transition: color 0.75s ease;
-      color: grey!important;
+      color: #dcdcdc!important;
 }
 
 .logo:hover #logo-portfolio{
