@@ -21,10 +21,10 @@
     <meta charset="UTF-8">
     <title>Ritesh Ramkhelawon | Portfolio</title>
 </head>
-<body>
+<body data-offset="50">
     <div class="container">
         <header>
-            <nav class="container fixed-top navbar navbar-expand-lg navbar-dark bg-danger pb-1">
+            <nav id="myNavbar" class="container fixed-top navbar navbar-expand-lg navbar-dark bg-danger pb-1">
                 <div class="logo">
                     <a id="logo" href="#">
                         <span id="logo-name" class="text-light">Ritesh Ramkhelawon | <span id="logo-portfolio" class="text-light">Portfolio</span></span>
@@ -38,13 +38,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="mr-3 nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="#profile-info">Profile</a>
                         </li>
                         <li class="mr-3 nav-item">
-                            <a class="nav-link" href="#">Example Work</a>
+                            <a class="nav-link" href="#projects">Example Work</a>
                         </li>
                         <li class="mr-3 nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#contact-form">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -52,7 +52,7 @@
         </header>
 
         <main>
-            <section id="profile-info" class="text-center mt-5">
+            <section id="profile-info" class="scroll-adjust text-center mt-5">
                 <div id="profile-pic" class="text-center">
                     <img style="border-radius: 50%; border: 6px solid #343a40 ;" class="mt-4 rounded-circle" src="assets/images/profile_pic.jpg" />
                     <h1 class="text-uppercase mt-1"><strong>Ritesh Ramkhelawon</strong></h1>
@@ -96,7 +96,7 @@
             </section>
             <br>
 
-            <section class="container" id="skills">
+            <section class="scroll-adjust mb-5 container" id="skills">
                 <h1 class="text-center"><strong>Skills & Experience</strong></h1>
                 <br><br>
                 <div class="row">
@@ -134,7 +134,7 @@
                 </div>
             </section>
 
-            <section class="pb-5 text-center bg-danger" id="projects">
+            <section class="scroll-adjust pb-5 mb-5 text-center bg-danger" id="projects">
                 <h1 class="text-light pt-2 mt-3"><strong>Project Work</strong></h1>
                 <br><br>
                 <div class="row justify-content-center">
@@ -245,6 +245,41 @@
         </main>
     </div>
 
+    <style>
+        .scroll-adjust{
+            padding-top:30px;
+            margin-top:-30px;
+        }
+    </style>
+
+    <script>
+        // Add scrollspy to <body>
+        $('body').scrollspy({target: ".navbar", offset: 50});
+
+        // Add smooth scrolling on all links inside the navbar
+        $("#myNavbar a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          }
+        });
+    </script>
 
 
 
