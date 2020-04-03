@@ -253,30 +253,44 @@
                     </div>
                 </div>
             </section>
-            <!-------------------------------------- END OF EXAMPLE WORK ----------------------------------------------------------->
+            <!-------------------------------------- END OF EXAMPLE WORK ------------------------------------------------>
 
-            <section id="contact" class="mb-4">
-                <!--Section heading-->
+            <!-------------------------------------- CONTACT FORM (FORMSPREE) ------------------------------------------------------->
+            <section id="contact" class="container mb-4">
                 <h2 class="h2-responsive font-weight-bold text-center my-4">Get In Touch!</h2>
-                <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-2">Do you have any questions? Please do not hesitate to contact me
                     directly. I'll get back to you ASAP!</p>
-
-                <!--Grid column-->
-                <div id="contact-icons">
-                    <ul class="text-center list-unstyled mb-0 list-inline">
-                        <li class="ml-5 mr-5 list-inline-item"><span class="text-danger fas fa-map-marker-alt fa-2x"></span>
-                            <p>Enfield, London, UK</p>
-                        </li>
-                        <li class="ml-5 mr-5 list-inline-item"><i class="text-danger fas fa-phone mt-4 fa-2x"></i>
-                            <p>+44 7952097677</p>
-                        </li>
-                        <li class="ml-5 mr-5 list-inline-item"><i class="text-danger fas fa-envelope mt-4 fa-2x"></i>
-                            <p>ritesh.ramkhelawon@outlook.com</p>
-                        </li>
-                    </ul>
-                </div>
+                <br>
+                <form class="container form-group" id="contact-form" action="https://formspree.io/xpzjwpor" method="POST">
+                    <div class="container row pr-0">
+                        <div class="col-lg-6">
+                            <label class="form-control border-0"  for="name"><strong>Your name:</strong></label>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name" required />
+                        </div>
+                        <div class="col-lg-6 pr-0">
+                            <label class="form-control border-0"  for="email"><strong>Your e-mail address:</strong></label>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email address" required />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <label class="form-control border-0"  for="subject"><strong>Subject:</strong></label>
+                        <input class="form-control" type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required />
+                    </div>
+                    <br>
+                    <div class="container">
+                        <label class="form-control border-0"  for="message"><strong>Message:</strong></label>
+                        <textarea class="container form-control" type="text" id="message" name="message" rows="2" placeholder="Enter your message" required></textarea>
+                        <br>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success" id="send-message-btn">Send Message</button>
+                        <p class="" id="my-form-status"></p>
+                    </div>
+                    <div style="display: none;" role="alert"></div>
+                </form>
             </section>
+            <!-------------------------------------- END OF CONTACT FORM ------------------------------------------------>
         </main>
 
         <!-------------------------------------- FOOTER --------------------------------------------------------------->
@@ -294,6 +308,58 @@
             margin-top:-30px;
         }
     </style>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("contact-form");
+        var button = document.getElementById("send-message-btn");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          button.style = "display: none ";
+          status.style = "display: block ";
+          status.classList.add("alert", "alert-success");
+          status.innerHTML = "Thanks for your message. I'll get back to you ASAP!";
+        }
+
+        function error() {
+          status.style = "display: block ";
+          status.classList.add("alert", "alert-danger");
+          status.innerHTML = "Oops! There was a problem sending your message.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function(ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+        });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+        }
+    </script>
 
     <script>
         // Add scrollspy to <body>
