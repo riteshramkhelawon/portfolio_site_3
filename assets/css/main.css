@@ -35,10 +35,25 @@
 /*****************************/
 
 /* Main content styling */
+#socialmedialinks a {
+	transition: color 0.75s ease!important;
+    color: white!important;
+}
 
-#socialmedialinks a:hover{
-    transition: color 0.75s ease;
-	color: white;
+#fb-icon a:hover{
+    transition: color 0.75s ease!important;
+	color: #3b5998!important;
+}
+
+#instagram-icon a:hover{
+    transition: color 0.75s ease!important;
+	color: #ff80df!important;
+
+}
+
+#github-icon a:hover{
+    transition: color 0.75s ease!important;
+	color: black!important;
 }
 
 ul {
