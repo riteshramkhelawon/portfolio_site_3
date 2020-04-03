@@ -32,6 +32,10 @@
 	transition: color 0.75s ease;
  	color:white!important;
 }
+
+#myNavbar {
+	border-bottom: 1px solid white!important;
+}
 /*****************************/
 
 /* Main content styling */
