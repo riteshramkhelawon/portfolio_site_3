@@ -69,6 +69,14 @@ ul {
 }
 /*****************************/
 
+/* skill section styling */
+.progress {
+	margin-left: 4rem!important;
+}
+
+/*****************************/
+
+
 /* Project section styling */
 .project-container{
   color: #1a1a1a;
