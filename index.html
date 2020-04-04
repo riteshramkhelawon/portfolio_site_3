@@ -84,6 +84,12 @@
                         detail and project planning skills, and have used these to great length whilst developing an
                         online marketplace web application from the ground up, within 3 months.
                     </p>
+
+                    <div class="text-center">
+                        <i class="fas fa-file-download"></i>
+                        <a class="text-center" href="https://drive.google.com/uc?export=download&id=1UjlD-dyyxi7B6FiP7jrR0-LVZWkHue-u" download="Ritesh Ramkhelawon CV">Download my CV</a>
+                    </div>
+
                 </div>
             </section>
             <!-------------------------------------- END OF PROFILE ----------------------------------------------------------->
@@ -285,9 +291,8 @@
                     </div>
                     <div class="text-center">
                         <button class="btn btn-success" id="send-message-btn">Send Message</button>
-                        <p class="" id="my-form-status"></p>
                     </div>
-                    <div style="display: none;" role="alert"></div>
+                    <div id="my-form-status" style="display: none;" role="alert"></div>
                 </form>
             </section>
             <!-------------------------------------- END OF CONTACT FORM ------------------------------------------------>
@@ -324,13 +329,13 @@
           form.reset();
           button.style = "display: none ";
           status.style = "display: block ";
-          status.classList.add("alert", "alert-success");
+          status.classList.add("alert", "alert-success", "text-center");
           status.innerHTML = "Thanks for your message. I'll get back to you ASAP!";
         }
 
         function error() {
           status.style = "display: block ";
-          status.classList.add("alert", "alert-danger");
+          status.classList.add("alert", "alert-danger", "text-center");
           status.innerHTML = "Oops! There was a problem sending your message.";
         }
 
