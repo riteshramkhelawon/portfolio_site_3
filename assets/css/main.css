@@ -1,3 +1,7 @@
+body {
+	margin-top: 50px!important;
+}
+
 /* Navbar anchor transitions */
 .nav-item a:hover {
 	transition: color 0.75s ease;
