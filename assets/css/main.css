@@ -171,14 +171,14 @@ ul {
 #contact-form input {
 	border-radius: 0;
 	border: 0px;
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid grey;
 }
 
 
 #contact-form textarea {
 	border-radius: 0;
 	border: 0px;
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid grey;
 }
 
 /*****************************/
