@@ -59,7 +59,7 @@ body {
 
 #socialmedialinks a {
 	transition: color 0.75s ease!important;
-    color: white!important;
+    color: grey!important;
 }
 
 #fb-icon a:hover{
@@ -173,6 +173,16 @@ ul {
 	border-radius: 0;
 	border: 0px;
 	border-bottom: 1px solid red;
+}
+
+/*****************************/
+
+/* footer styling */
+footer {
+	background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: black;
+    opacity: 0.95;
 }
 
 /*****************************/
