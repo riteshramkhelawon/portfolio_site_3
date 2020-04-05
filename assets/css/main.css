@@ -105,6 +105,11 @@ ul {
       overflow: hidden;
 }
 
+.project-container h2 {
+	color: #646464;
+}
+
+
 .projectwork .projectwork-overlay{
 	background: rgba(0,0,0,0.7);
 	position: absolute;
@@ -168,6 +173,7 @@ ul {
 	border: 0px;
 	border-bottom: 1px solid red;
 }
+
 
 #contact-form textarea {
 	border-radius: 0;
