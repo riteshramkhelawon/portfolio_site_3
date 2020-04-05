@@ -24,7 +24,7 @@
 <body data-offset="50">
         <!-------------------------------------- NAVBAR --------------------------------------------------------------->
         <header>
-            <nav id="myNavbar" class="fixed-top navbar navbar-expand-lg navbar-dark bg-danger pb-1">
+            <nav id="myNavbar" data-spy="affix" class="fixed-top navbar navbar-expand-lg navbar-dark pb-1">
                 <div class="logo">
                     <a id="logo" href="#">
                         <span id="logo-name" class="text-light">Ritesh Ramkhelawon | <span id="logo-portfolio" class="text-light">Portfolio</span></span>
@@ -63,12 +63,12 @@
                 </div>
                 <div class="row">
                     <div class="text-right col-6">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span class="text-secondary">Enfield, London, UK</span>
+                        <i class="text-dark fas fa-map-marker-alt"></i>
+                        <span class="text-dark">Enfield, London, UK</span>
                     </div>
                     <div class="text-left col-6">
-                        <i class="fas fa-file-code"></i>
-                        <span class="text-secondary">Web Developer</span>
+                        <i class="text-dark fas fa-file-code"></i>
+                        <span class="text-dark">Web Developer</span>
                     </div>
                 </div>
             </section>
@@ -394,7 +394,20 @@
             <br><br>
         </footer>
         <!-------------------------------------- END OF FOOTER ----------------------------------------------------------->
+    <script>
+        var offsetTop = $("#profile-text").offset().top;
 
+        $(window).scroll(function(){
+          var scrollTop = $(window).scrollTop();
+          if(scrollTop > offsetTop){
+            $("#myNavbar").css("background-image", "linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)", "margin","100px");
+          }
+           if(scrollTop < offsetTop){
+            $("#myNavbar").css("background", "transparent");
+
+          }
+        });
+    </script>
 
     <style>
         .scroll-adjust{
