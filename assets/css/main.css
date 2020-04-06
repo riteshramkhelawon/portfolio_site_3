@@ -1,22 +1,42 @@
-body {
-	margin-top: 50px!important;
-}
-
+html,body {
+     width: 100%;
+     height: 100%;
+     margin-top: 25px!important;
+     padding: 0px;
+     overflow-x: hidden;
+ }
 
 @media (min-width: 768px) and (max-width: 991px) {
+	html,body {
+         margin-top: 40px!important;
+     }
+
+
+	header span {
+		font-size: 4vw;
+	}
+
+	.collapsing{
+    	font-size: 3.5vw;
+    }
+
+    .show {
+    	font-size: 3.5vw;
+    }
+
 	p {
 		font-size: 3.62vw;
 	}
 
 	h2 strong{
-		font-size: 6vw;
+		font-size: 4vw;
 	}
 
 	h3 {
-    		font-size: 5vw!important;
-    	}
+        font-size: 5vw!important;
+    }
 
-	label strong{
+	label strong {
 		font-size: 3vw;
 	}
 
@@ -71,9 +91,13 @@ body {
 
 
 #myNavbar {
-	background: transparent;
+	border-bottom: 1px solid white;
+	background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: black;
 
 }
+
 /*****************************/
 
 /* Main content styling */
