@@ -2,6 +2,25 @@ body {
 	margin-top: 50px!important;
 }
 
+
+@media (min-width: 768px) and (max-width: 991px) {
+	p {
+		font-size: 3vw;
+	}
+
+	h2{
+		font-size: 3.5vw;
+	}
+
+	label{
+		font-size: 3vw;
+	}
+
+	input{
+		font-size: 3vw;
+	}
+}
+
 /* Navbar anchor transitions */
 
 .nav-item a:hover {
