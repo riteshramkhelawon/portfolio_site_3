@@ -5,19 +5,31 @@ body {
 
 @media (min-width: 768px) and (max-width: 991px) {
 	p {
+		font-size: 3.62vw;
+	}
+
+	h2 strong{
+		font-size: 6vw;
+	}
+
+	h3 {
+    		font-size: 5vw!important;
+    	}
+
+	label strong{
 		font-size: 3vw;
 	}
 
-	h2{
-		font-size: 3.5vw;
-	}
-
-	label{
+	input {
 		font-size: 3vw;
 	}
 
-	input{
-		font-size: 3vw;
+	.progress {
+		height: 3rem!important;
+
+	}
+	.progress-bar {
+		font-size: 4vw;
 	}
 }
 
